@@ -4,3 +4,7 @@ files:
   - source: /docker-compose.yml
     destination: /home/ec2-user/
     runas: root
+hooks:
+  AfterInstall:
+    - location: /home/ec2-user/install.sh
+      runas: root
